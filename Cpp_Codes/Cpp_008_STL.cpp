@@ -68,10 +68,49 @@ void vectorsCpp(){
     for(auto it = v1.begin();it!=v1.end();it++)
     cout<<*it<<" ";
     cout<<endl;
+
+    //inserting into vector
+    vector<int> v6(2,10);
+    vector<int> v7(2,30);
+    v6.insert(v6.begin(),300);
+    v6.insert(v6.begin()+2,12);
+    v6.insert(v6.begin()+3,v7.begin(),v7.end());
+    v6.push_back(13);
+    for(auto it : v6){
+        cout<<it<<" ";
+    }cout<<endl;
+
+    //swaping vectors
+    vector <int> v8;
+    v8.swap(v7);
+    cout<<v6.size()<<endl;
+    cout<<v8.empty()<<endl;
+    v8.clear();
+    cout<<v8.empty()<<endl;
+}
+
+void listCpp(){
+    list<int> l1;
+    /*
+        Everting is same as vector
+    */
+}
+
+void dequeCpp(){
+    deque<int> dq1;
+    /*
+        similar to that of list and vector
+    */
+}
+
+void stackCpp(){
+    //Works on LIFO operation (last in first out)
+    //Indexing not possible
+    //Every Operation take O(n) time complexicity
 }
 
 int main(){
     // pairsCpp();
-    // vectorsCpp();
-    cout<<pow(2,-2);
+    vectorsCpp();
+    return 0;
 }
