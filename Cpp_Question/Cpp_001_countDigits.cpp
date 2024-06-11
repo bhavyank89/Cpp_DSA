@@ -29,16 +29,19 @@ int main()
     so the space required to store the string will be proportional 
     to the number of digits in the integer.
     */
-    /*
-        Approach-3
-        TimeComplexicity - O(1)
-        SpaceComplexicity - O(1)
-    */
+    
     string stringN = to_string(n);
     cout << "length of string : " << stringN.length() << endl;  //Approach-1(convert to string and count it's length)
     cout << "length of string : " << intLength(n) << endl;  //Approach-2(linear counting)
     cout << "length of string : " << int(log10(n)+1) << endl;  //Approach-3(Best Approach)
 
+    /*
+        Approach-3
+        TimeComplexicity - O(1)
+        SpaceComplexicity - O(1)
+
+        int digit = (int)(log10(n)+1);
+    */
 
     return 0;
 }
