@@ -108,9 +108,38 @@ void stackCpp(){
     //Indexing not possible
     //Every Operation take O(n) time complexicity
 }
+void mapCpp(){
+    //map is a container which stores everthing as a key value pair
+    //map stores everything in the sorted order of keys
 
+    //Declaration and Initialisation
+    map<int,int> map1;
+    map1[2]=10;
+    map1.emplace(1,3);
+    map1.insert({3,15});
+    cout<<map1[2]<<endl;
+
+    map<int,pair<int,int>> map2;
+    map2[1]={12,2};
+    map2[2]={10,9};
+    map2[3]={13,12};
+
+
+    //Iterrating map
+    for(auto it : map1){
+        cout<<it.first<<" ";//prints key
+        cout<<it.second<<" ";//prints value
+        cout<<endl;
+    }
+    for(auto it : map2){
+        cout<<it.first<<" ";//prints key
+        cout<<it.second.first<<" "<<it.second.second;//prints value
+        cout<<endl;
+    }
+}
 int main(){
     // pairsCpp();
-    vectorsCpp();
+    // vectorsCpp();
+    mapCpp();
     return 0;
 }
