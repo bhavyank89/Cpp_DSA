@@ -23,7 +23,8 @@ public:
     Hero()
     {
         cout << "Default Constructor called.." << endl;
-        // This is neglected in when we use paramaterised constructor
+        cout << "this -> " << this << endl;
+        this->rank = "Bronze";
     }
     // Parameterised Constructor
     /*
@@ -103,6 +104,34 @@ int main()
     shazam.name = "Shazam";
     shazam.display();
 
+    cout << endl;
+
+    // To understand shallow copy comment out the copy Constructor created
+    // Shallow copy is done in the case of default copy constructor.
+    cout << "Understanding Shallow copy " << endl;
+    // creating hero1
+    Hero hero1;
+    cout << "Address of hero1 : " << &hero1 << endl;
+    hero1.name = "hero1";
+    hero1.level = 4;
+    hero1.setHealth(89);
+    hero1.display();
+
+    cout << endl;
+
+    // copying hero1 to hero2
+    Hero hero2 = hero1;
+    cout << "Address of hero2 : " << &hero2 << endl;
+    hero2.display();
+    cout << endl;
+
+    // changing hero1 data and displaying
+    hero1.name[0] = 'H';
+    hero1.display();
+    cout << endl;
+
+    // hero2 data automatically gets changed
+    hero2.display();
     cout << endl;
 
     return 0;
