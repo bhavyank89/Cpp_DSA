@@ -10,6 +10,9 @@ private:
 public:
     int level;
     string name;
+    /*Static keyword create a data member that belongs to a class.
+      And to access this data member, there is no need to create the object*/
+    static int staticVariable; // declaring static variable
     void display(void);
 
     /*
@@ -80,7 +83,17 @@ public:
     {
         cout << "Destructor called ..." << endl;
     }
+
+    // Static function
+    /*Static function can access static variable */
+    static int random()
+    {
+        return staticVariable;
+    }
 };
+
+// Initializating static variable
+int Hero ::staticVariable = 5;
 
 void Hero ::display()
 {
@@ -179,7 +192,13 @@ int main()
     Hero hero5; // Static Allcation
     // gets dislocated automatically
 
-    Hero *hero6v = new Hero(); // Dynamic Allocation
+    Hero *hero6 = new Hero(); // Dynamic Allocation
+    delete hero6;
+
+    // static variable and function
+    cout << "Understanding static variable..." << endl;
+    cout << "Static variable : " << Hero::staticVariable << endl;
+    cout << Hero::random << endl;
 
     return 0;
 }
