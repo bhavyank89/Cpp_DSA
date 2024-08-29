@@ -13,6 +13,8 @@ using namespace std;
 class Employee
 {
 private: // Can only be accessed inside Employee class
+         // bydefault all the member of the class are private
+         // to make them public, add the to public member
     int a, b, c;
 
 public:
