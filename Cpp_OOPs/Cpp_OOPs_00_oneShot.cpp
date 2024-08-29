@@ -134,5 +134,28 @@ int main()
     hero2.display();
     cout << endl;
 
+    // copying using copy assignment opperator
+    Hero hero3;
+    cout << "Address of hero3 : " << &hero3 << endl;
+    hero3.name = "America";
+    hero3.setHealth(76);
+    hero3.level = 3;
+    hero3.display();
+    cout << endl;
+
+    Hero hero4;
+    cout << "Address of hero4 : " << &hero4 << endl;
+    hero4.name = "Norvay";
+    hero4.setHealth(86);
+    hero4.level = 4;
+    hero4.display();
+    cout << endl;
+
+    hero4 = hero3;
+    hero3.display();
+    cout << endl;
+    hero4.display();
+    cout << endl;
+
     return 0;
 }
