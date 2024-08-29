@@ -67,6 +67,19 @@ public:
     {
         health = h;
     }
+
+    // Destructor - free the memory allocated with the objects created
+    /*
+        - they also get created byDefault.
+        - we can also create our own destructor.
+        - they are also argument free and return type free.
+
+        syntax is same as constructor but the only difference is of using a ~ before the name of the destructor.
+    */
+    ~Hero()
+    {
+        cout << "Destructor called ..." << endl;
+    }
 };
 
 void Hero ::display()
@@ -156,6 +169,17 @@ int main()
     cout << endl;
     hero4.display();
     cout << endl;
+
+    cout << "Understanding Destructor..." << endl;
+    /*
+        - for static allocation, destructor is called automatically
+        - for dynamic alloaction, destructor is called as
+            - delete objectName;
+    */
+    Hero hero5; // Static Allcation
+    // gets dislocated automatically
+
+    Hero *hero6v = new Hero(); // Dynamic Allocation
 
     return 0;
 }
