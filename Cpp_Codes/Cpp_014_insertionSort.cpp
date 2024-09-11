@@ -42,12 +42,12 @@ void insertionSortArr(int arr[], int size)
 int main()
 {
 
-    int n = 0, searchElement = 0;
+    int n = 0;
 
     cout << "Enter array Size : ";
     cin >> n;
 
-    int arr[n], revArr[n], copyArr[n];
+    int arr[n];
 
     takeArray(arr, n);
     printArray(arr, n, "Array");
