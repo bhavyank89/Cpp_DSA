@@ -26,14 +26,20 @@ void printArray(int arr[], int size, string title = "Array", int i = 0)
 }
 void bubbleSortArr(int arr[], int size)
 { // bubbles up (pushes) the max element to the last index of itterating array
-    // TC - O(n^2), SC - O(1)
+    // TC - O(n^2),omega(n), SC - O(1)
     for (int i = size; i > 0; i--)
     {
+        int didSwap = 0;
         for (int j = 0; j < i; j++)
         {
             if (arr[j] > arr[j + 1])
+            {
                 swap(arr[j], arr[j + 1]);
+                didSwap = 1;
+            }
         }
+        if (!didSwap)
+            break;
     }
 }
 
