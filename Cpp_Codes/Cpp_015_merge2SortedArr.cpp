@@ -43,6 +43,9 @@ void merge2SortedArr(int arrA[], int arrB[], int arrC[], int m, int n)
 int main()
 {
     // merging two sortd array into single sorted arr
+    // arrA[] - sorted array 1
+    // arrB[] - sorted array 2
+    // arrC[] - sorted merged array from arrA and arrB
     int n = 0, m = 0, o = 0;
 
     cout << "Size arrA[], arrB[] : ";
