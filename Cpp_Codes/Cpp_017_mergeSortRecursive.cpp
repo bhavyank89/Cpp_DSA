@@ -47,7 +47,7 @@ void mergeSortArr(int arr[], int low, int high)
     //  - Worst Case: O(n log n)
 
     // Space Complexity:
-    // - O(n)
+    // - O(n) --> as a temp array is created
     if (low >= high)
         return;
 
