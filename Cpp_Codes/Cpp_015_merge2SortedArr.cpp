@@ -1,6 +1,28 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+void takeArray(int arr[], int size, string title = "array", int i = 0)
+{
+    // TC - O(n),SC - O(n) --> n = size
+    if (i == size)
+        return;
+    if (!i)
+        cout << "Enter " << title << " : ";
+    cin >> arr[i];
+    takeArray(arr, size, title, i + 1);
+}
+void printArray(int arr[], int size, string title = "Array", int i = 0)
+{
+    // TC - O(n),SC - O(n) --> n = size
+    if (i == size)
+    {
+        cout << endl;
+        return;
+    }
+    if (!i)
+        cout << title << " : ";
+    cout << arr[i] << " ";
+    return printArray(arr, size, title, i + 1);
+}
 void merge2SortedArr(int arrA[], int arrB[], int arrC[], int m, int n)
 {
     // TC - O(M+N),SC - O(1)
