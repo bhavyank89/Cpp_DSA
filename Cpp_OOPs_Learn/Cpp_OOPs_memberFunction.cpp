@@ -14,14 +14,12 @@ using namespace std;
 class Student
 {
 private:
-    string name;    
-    string roll_number;
-    int age;
-    double cgpa;
+    string name = "John";
 
 public:
-    void sayHello(){
-        cout<<"Hello "<<name<<endl;
+    void sayHello()
+    {
+        cout << "Hello " << name << endl;
     }
 };
 
@@ -30,12 +28,7 @@ int main()
     // creating object using class
     Student S1;
 
-    // modifying public members of the class
-    S1.name = "John";
-    S1.roll_number = "BT22ece123";
-    S1.age = 19;
-    S1.cgpa = 8.45;
-
+    // accessing public members of the class
     S1.sayHello();
 
     return 0;
