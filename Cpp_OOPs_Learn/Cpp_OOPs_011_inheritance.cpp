@@ -109,7 +109,7 @@ public:
     // member function
     void display()
     {
-        cout << "Displaying Animal : " << endl;
+        cout << "Displaying Plant : " << endl;
         cout << "Name : " << this->name << endl;
         cout << "Age : " << this->age << endl;
         cout << "Gender : " << this->gender << endl;
