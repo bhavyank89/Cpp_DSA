@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+// TC - O(n^2)
+// SC - O(n) - due to recursive call
 void printArray(int arr[], int size, string title = "Array", int i = 0)
 {
     if (i == size)
