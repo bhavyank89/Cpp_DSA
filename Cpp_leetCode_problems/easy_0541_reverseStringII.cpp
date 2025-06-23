@@ -1,13 +1,18 @@
-Traverse the string in steps of 2k.
+class Solution
+{
+public:
+    string reverseStr(string s, int k)
+    {
+        int n = s.size();
 
-    This gives us the start of each 2k block.
+        for (int i = 0; i < n; i += 2 * k)
+        {
+            // Reverse the first k characters in the current 2k block
+            // If less than k characters left, reverse all of them
+            int j = min(i + k, n);
+            reverse(s.begin() + i, s.begin() + j);
+        }
 
-    For each such block :
-
-    Reverse the substring from i to i +
-    k - 1.
-
-    Be careful of bounds : if fewer than k characters remain,
-    reverse till the end of the string(min(i + k, n)).
-
-    Return the modified string.
+        return s;
+    }
+};
